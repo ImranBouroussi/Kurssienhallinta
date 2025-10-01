@@ -1,0 +1,1 @@
+<?php header('Location: /kurssihallinta_full/courses/index.php'); exit; ?>
