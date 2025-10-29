@@ -29,8 +29,8 @@ require_once __DIR__ . '/../includes/header.php'; ?><h1><?= htmlspecialchars($co
         </tr>
     </thead>
     <tbody><?php while ($s = $students->fetch_assoc()): ?><tr>
-                <td><a href="/kurssihallinta_full/students/view.php?id=<?= $s['student_id'] ?>"><?= htmlspecialchars($s['first_name'] . ' ' . $s['last_name']) ?></a></td>
+                <td><a href="/kurssienhallinta/students/view.php?id=<?= $s['student_id'] ?>"><?= htmlspecialchars($s['first_name'] . ' ' . $s['last_name']) ?></a></td>
                 <td><?= (int)$s['year_group'] ?></td>
-                <td><a class="btn btn-sm btn-danger" href="/kurssihallinta_full/enrollments/delete.php?id=<?= $s['student_id'] ?>&course_id=<?= $id ?>" onclick="return confirm('Poista ilmoittautuminen?')">Poista</a></td>
+                <td><a class="btn btn-sm btn-danger" href="/kurssienhallinta/enrollments/delete.php?id=<?= $s['student_id'] ?>&course_id=<?= $id ?>" onclick="return confirm('Poista ilmoittautuminen?')">Poista</a></td>
             </tr><?php endwhile; ?></tbody>
 </table><a class="btn btn-secondary" href="index.php">Takaisin</a><?php require_once __DIR__ . '/../includes/footer.php'; ?>

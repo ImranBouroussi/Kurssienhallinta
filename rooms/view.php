@@ -25,7 +25,7 @@ require_once __DIR__ . '/../includes/header.php'; ?><h1><?= htmlspecialchars($ro
         </tr>
     </thead>
     <tbody><?php while ($c = $courses->fetch_assoc()): ?><tr>
-                <td><a href="/kurssihallinta_full/courses/view.php?id=<?= $c['course_id'] ?>"><?= htmlspecialchars($c['name']) ?></a></td>
+                <td><a href="/kurssienhallinta/courses/view.php?id=<?= $c['course_id'] ?>"><?= htmlspecialchars($c['name']) ?></a></td>
                 <td><?= htmlspecialchars($c['first_name'] . ' ' . $c['last_name']) ?></td>
                 <td><?= htmlspecialchars($c['start_date']) ?></td>
                 <td><?= htmlspecialchars($c['end_date']) ?></td>

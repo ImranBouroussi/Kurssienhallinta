@@ -14,4 +14,4 @@ $page_title = 'Opettaja';
 require_once __DIR__ . '/../includes/header.php'; ?><h1><?= htmlspecialchars($t['first_name'] . ' ' . $t['last_name']) ?></h1>
 <p>Aine: <?= htmlspecialchars($t['subject']) ?></p>
 <h3>Vastuulliset kurssit</h3>
-<ul><?php while ($co = $courses->fetch_assoc()): ?><li><a href="/kurssihallinta_full/courses/view.php?id=<?= $co['course_id'] ?>"><?= htmlspecialchars($co['name']) ?></a> — <?= htmlspecialchars($co['start_date']) ?> — <?= htmlspecialchars($co['end_date']) ?> (<?= htmlspecialchars($co['room_name']) ?>)</li><?php endwhile; ?></ul><a class="btn btn-secondary" href="index.php">Takaisin</a><?php require_once __DIR__ . '/../includes/footer.php'; ?>
+<ul><?php while ($co = $courses->fetch_assoc()): ?><li><a href="/kurssienhallinta/courses/view.php?id=<?= $co['course_id'] ?>"><?= htmlspecialchars($co['name']) ?></a> — <?= htmlspecialchars($co['start_date']) ?> — <?= htmlspecialchars($co['end_date']) ?> (<?= htmlspecialchars($co['room_name']) ?>)</li><?php endwhile; ?></ul><a class="btn btn-secondary" href="index.php">Takaisin</a><?php require_once __DIR__ . '/../includes/footer.php'; ?>

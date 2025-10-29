@@ -10,7 +10,7 @@ require_once __DIR__ . '/../includes/header.php';
 <h3>Ilmoittautuneet kurssit</h3>
 <ul>
 <?php while($c=$courses->fetch_assoc()): ?>
-  <li><a href="/kurssihallinta_full/courses/view.php?id=<?=$c['course_id']?>"><?=htmlspecialchars($c['name'])?></a> — <?=htmlspecialchars($c['start_date'])?></li>
+  <li><a href="/kurssienhallinta/courses/view.php?id=<?=$c['course_id']?>"><?=htmlspecialchars($c['name'])?></a> — <?=htmlspecialchars($c['start_date'])?></li>
 <?php endwhile; ?>
 </ul>
 <a class="btn btn-secondary" href="index.php">Takaisin</a>
